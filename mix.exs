@@ -21,7 +21,8 @@ defmodule ExWallet.MixProject do
   defp deps do
     [
       {:poison, "~> 3.1"},
-      {:libsecp256k1, "~> 0.1.10"}
+      {:libsecp256k1, "~> 0.1.10"},
+      {:silicon, "~> 0.1.0"}
     ]
   end
 
