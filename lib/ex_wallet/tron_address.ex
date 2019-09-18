@@ -16,8 +16,9 @@ defmodule ExWallet.TronAddress do
     |> Silicon.Hash.keccak_256()
     |> get_last_20_bytes()
     |> prepend_version_byte(network)
-    |> Base58.check_encode()
   end
+
+  def calculate_base58(private_key, network \\ :main), do: calculate(private_key, network) |> Base58.check_encode()
 
   defp prepend_version_byte(public_hash, network) do
     @version_bytes

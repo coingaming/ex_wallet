@@ -29,7 +29,7 @@ defmodule ExWallet.TronAddressTest do
   test "correct wallet generation", %{master_key: master_key, path: path, expected: expected} do
     Enum.map(0..9, fn n ->
       %{key: child} = ExWallet.Extended.Children.derive(master_key, path <> "/#{n}")
-      assert expected[n] == ExWallet.TronAddress.calculate(child)
+      assert expected[n] == ExWallet.TronAddress.calculate_base58(child)
     end)
   end
 end
