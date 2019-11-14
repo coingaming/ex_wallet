@@ -22,7 +22,8 @@ defmodule ExWallet.MixProject do
     [
       {:poison, "~> 3.1"},
       {:libsecp256k1, "~> 0.1.10"},
-      {:silicon, "~> 0.1.0"}
+      {:silicon, "~> 0.1.0"},
+      {:stream_data, "~> 0.4"}
     ]
   end
 
