@@ -68,7 +68,13 @@ defmodule ExWallet.Extended.Children do
     |> Kernel.+(key)
     |> rem(@curve_order)
     |> :binary.encode_unsigned()
+    |> set_32_bytesize()
   end
+
+  defp set_32_bytesize(priv_key) when byte_size(priv_key) < 32,
+    do: set_32_bytesize(<<0>> <> priv_key)
+
+  defp set_32_bytesize(priv_key), do: priv_key
 
   defp elliptic_curve_point_addition(
          <<derived_key::binary-32, child_chain::binary>>,

@@ -150,6 +150,28 @@ defmodule ExWallet.Extended.ChildrenTest do
     end
   end
 
+  describe "children private key generator" do
+    use ExUnitProperties
+
+    require Integer
+
+    property "generates private keys with 32 bytes" do
+      check all seed <- positive_integer(),
+                child <- positive_integer(),
+                max_runs: 400 do
+        private_key =
+          seed
+          |> Integer.to_string()
+          |> Base.encode16()
+          |> Extended.master()
+          |> Children.derive("m/0'/1/2'/2/#{child}")
+          |> Map.get(:key)
+
+        assert byte_size(private_key) == 32
+      end
+    end
+  end
+
   defp derive(master_key, chain) do
     master_key
     |> Children.derive(chain)
