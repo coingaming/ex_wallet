@@ -1,11 +1,11 @@
 defmodule ExWallet.TronAddress do
-  alias ExWallet.{Base58, KeyPair}
+  alias ExWallet.{KeyPair}
 
   # NOTE: Source:
   # https://github.com/tronprotocol/java-tron/blob/b6971699752adc455cf9a0b53c09c1ab042eaaf8/src/test/java/stest/tron/wallet/common/client/Parameter.java#L12
   @version_bytes %{
     main: <<0x41>>,
-    test: <<0xa0>>
+    test: <<0xA0>>
   }
 
   # NOTE: Algorithm: https://developers.tron.network/docs/account
@@ -18,7 +18,8 @@ defmodule ExWallet.TronAddress do
     |> prepend_version_byte(network)
   end
 
-  def calculate_base58(private_key, network \\ :main), do: calculate(private_key, network) |> Base58.check_encode()
+  def calculate_base58(private_key, network \\ :main),
+    do: calculate(private_key, network) |> B58.version_encode58_check!()
 
   defp prepend_version_byte(public_hash, network) do
     @version_bytes

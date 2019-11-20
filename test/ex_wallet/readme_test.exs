@@ -14,7 +14,7 @@ defmodule ExWallet.ReadmeTest do
     test "part2" do
       ExWallet.Mnemonic.Advanced.generate()
       ExWallet.Mnemonic.Simple.generate()
-      ExWallet.Base58.Encode.call("1")
+      B58.encode58("1")
       entropy = "00000000000000000000000000000000"
       ExWallet.Mnemonic.Advanced.from_entropy(entropy)
       ExWallet.Mnemonic.Simple.from_entropy(entropy)
