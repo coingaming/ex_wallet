@@ -22,6 +22,8 @@ defmodule ExWallet.MixProject do
     [
       {:poison, "~> 3.1"},
       {:libsecp256k1, "~> 0.1.10"},
+      # Check: https://github.com/nocursor/b58/pull/1
+      {:basefiftyeight, "~> 0.1.0", github: "ulissesalmeida/b58", branch: "remove-prefix"},
       {:silicon, "~> 0.1.0"},
       {:stream_data, "~> 0.4", only: [:test]}
     ]

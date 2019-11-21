@@ -1,4 +1,5 @@
 %{
+  "basefiftyeight": {:git, "https://github.com/ulissesalmeida/b58.git", "77c9603cbac5f308f704ba84eb08da61de15167d", [branch: "remove-prefix"]},
   "blake2_elixir": {:hex, :blake2_elixir, "0.8.0", "7b2284336bed6982b1532e85e4efe5f007e3de3a6d90584f4416c11ebb37d965", [:make, :mix], [{:elixir_make, "~> 0.5", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "elixir_make": {:hex, :elixir_make, "0.6.0", "38349f3e29aff4864352084fc736fa7fa0f2995a819a737554f7ebd28b85aaab", [:mix], [], "hexpm"},
   "keccakf1600": {:hex, :keccakf1600_orig, "2.0.0", "0a7217ddb3ee8220d449bbf7575ec39d4e967099f220a91e3dfca4dbaef91963", [:rebar3], [], "hexpm"},

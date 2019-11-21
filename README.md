@@ -74,23 +74,6 @@ iex(4)> ExWallet.Signature.verify(public_key, signature, "message")
 true
 ```
 
-### Base58
-
-**encode**
-
-This is a regular `Base58` encoding according to its alphabet:
-
-```elixir
-iex(6)> ExWallet.Base58.Encode.call("1")
-"r"
-iex(7)> ExWallet.Base58.Encode.call("0")
-"q"
-iex(8)> ExWallet.Base58.Encode.call("a")
-"2g"
-iex(9)> ExWallet.Base58.Encode.call("k")
-"2r"
-```
-
 ### Address
 
 **`calculate/1`**

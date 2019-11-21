@@ -1,5 +1,5 @@
 defmodule ExWallet.Extended do
-  alias ExWallet.{Base58, Crypto, Compression}
+  alias ExWallet.{Crypto, Compression}
   alias ExWallet.Extended.{Private, Public}
 
   def master(seed, network \\ :main) do
@@ -29,7 +29,7 @@ defmodule ExWallet.Extended do
   defp encode_serialize(transformed_key, key) do
     transformed_key
     |> prepend_serial(key)
-    |> Base58.check_encode()
+    |> B58.version_encode58_check!()
   end
 
   defp prepend_serial(
