@@ -156,9 +156,11 @@ defmodule ExWallet.Extended.ChildrenTest do
     require Integer
 
     property "generates private keys with 32 bytes" do
-      check all seed <- positive_integer(),
-                child <- positive_integer(),
-                max_runs: 400 do
+      check all(
+              seed <- positive_integer(),
+              child <- positive_integer(),
+              max_runs: 400
+            ) do
         private_key =
           seed
           |> Integer.to_string()

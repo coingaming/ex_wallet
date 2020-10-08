@@ -24,7 +24,7 @@ defmodule ExWallet.MixProject do
       {:libsecp256k1, "~> 0.1.10"},
       # Check: https://github.com/nocursor/b58/pull/1
       {:basefiftyeight, "~> 0.1.0", github: "ulissesalmeida/b58", branch: "remove-prefix"},
-      {:silicon, "~> 0.1.0"},
+      {:keccakf1600, "~> 2.0", hex: :keccakf1600_orig},
       {:stream_data, "~> 0.4", only: [:test]}
     ]
   end
