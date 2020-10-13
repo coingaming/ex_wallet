@@ -1,12 +1,8 @@
 %{
   "basefiftyeight": {:git, "https://github.com/ulissesalmeida/b58.git", "77c9603cbac5f308f704ba84eb08da61de15167d", [branch: "remove-prefix"]},
-  "blake2_elixir": {:hex, :blake2_elixir, "0.8.0", "7b2284336bed6982b1532e85e4efe5f007e3de3a6d90584f4416c11ebb37d965", [:make, :mix], [{:elixir_make, "~> 0.5", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
-  "elixir_make": {:hex, :elixir_make, "0.6.0", "38349f3e29aff4864352084fc736fa7fa0f2995a819a737554f7ebd28b85aaab", [:mix], [], "hexpm"},
-  "keccakf1600": {:hex, :keccakf1600_orig, "2.0.0", "0a7217ddb3ee8220d449bbf7575ec39d4e967099f220a91e3dfca4dbaef91963", [:rebar3], [], "hexpm"},
-  "libdecaf": {:hex, :libdecaf, "1.0.0", "3003f64cbdaf534f62f4489ba4b911b8fa7c9bee6c325ffbc372fc11357cc174", [:rebar3], [], "hexpm"},
-  "libsecp256k1": {:hex, :libsecp256k1, "0.1.10", "d27495e2b9851c7765129b76c53b60f5e275bd6ff68292c50536bf6b8d091a4d", [:make, :mix], [{:mix_erlang_tasks, "0.1.0", [hex: :mix_erlang_tasks, repo: "hexpm", optional: false]}], "hexpm"},
-  "mix_erlang_tasks": {:hex, :mix_erlang_tasks, "0.1.0", "36819fec60b80689eb1380938675af215565a89320a9e29c72c70d97512e4649", [:mix], [], "hexpm"},
-  "poison": {:hex, :poison, "3.1.0", "d9eb636610e096f86f25d9a46f35a9facac35609a7591b3be3326e99a0484665", [:mix], [], "hexpm"},
-  "silicon": {:hex, :silicon, "0.1.0", "05653c16143257f7d244e74e3086a30cb9d82b29182a31b2f10a186565fb809f", [:mix], [{:blake2_elixir, "~> 0.8", [hex: :blake2_elixir, repo: "hexpm", optional: false]}, {:keccakf1600, "~> 2.0", [hex: :keccakf1600_orig, repo: "hexpm", optional: false]}, {:libdecaf, "~> 1.0", [hex: :libdecaf, repo: "hexpm", optional: false]}, {:libsecp256k1, "~> 0.1.10", [hex: :libsecp256k1, repo: "hexpm", optional: false]}], "hexpm"},
-  "stream_data": {:hex, :stream_data, "0.4.3", "62aafd870caff0849a5057a7ec270fad0eb86889f4d433b937d996de99e3db25", [:mix], [], "hexpm"},
+  "keccakf1600": {:hex, :keccakf1600_orig, "2.0.0", "0a7217ddb3ee8220d449bbf7575ec39d4e967099f220a91e3dfca4dbaef91963", [:rebar3], [], "hexpm", "bdbbb02d67bea35605f95d4e3de48203347374e414da7945c4f2f7fd13ffe632"},
+  "libsecp256k1": {:hex, :libsecp256k1, "0.1.10", "d27495e2b9851c7765129b76c53b60f5e275bd6ff68292c50536bf6b8d091a4d", [:make, :mix], [{:mix_erlang_tasks, "0.1.0", [hex: :mix_erlang_tasks, repo: "hexpm", optional: false]}], "hexpm", "09ea06239938571124f7f5a27bc9ac45dfb1cfc2df40d46ee9b59c3d51366652"},
+  "mix_erlang_tasks": {:hex, :mix_erlang_tasks, "0.1.0", "36819fec60b80689eb1380938675af215565a89320a9e29c72c70d97512e4649", [:mix], [], "hexpm", "95d2839c422c482a70c08a8702da8242f86b773f8ab6e8602a4eb72da8da04ed"},
+  "poison": {:hex, :poison, "3.1.0", "d9eb636610e096f86f25d9a46f35a9facac35609a7591b3be3326e99a0484665", [:mix], [], "hexpm", "fec8660eb7733ee4117b85f55799fd3833eb769a6df71ccf8903e8dc5447cfce"},
+  "stream_data": {:hex, :stream_data, "0.4.3", "62aafd870caff0849a5057a7ec270fad0eb86889f4d433b937d996de99e3db25", [:mix], [], "hexpm", "7dafd5a801f0bc897f74fcd414651632b77ca367a7ae4568778191fc3bf3a19a"},
 }

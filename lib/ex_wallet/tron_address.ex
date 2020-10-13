@@ -13,7 +13,7 @@ defmodule ExWallet.TronAddress do
     private_key
     |> KeyPair.to_public_key()
     |> pub_key_64_bytes()
-    |> Silicon.Hash.keccak_256()
+    |> :keccakf1600.sha3_256()
     |> get_last_20_bytes()
     |> prepend_version_byte(network)
   end

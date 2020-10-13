@@ -13,7 +13,7 @@ defmodule ExWallet.WifTest do
         x
       end
       |> Enum.map(&String.to_integer(&1, 16))
-      |> Enum.reverse
+      |> Enum.reverse()
       |> Enum.reduce(<<>>, fn x, acc -> <<x>> <> acc end)
 
     [priv: priv]
